@@ -207,8 +207,6 @@ public class MathUtilities {
         byte second = multiplier;
         byte result = (byte) (first * second);
         return result;
-        //byte result = (byte) (first * second);
-        //return result;
     }
 
     /**
