@@ -26,8 +26,7 @@ public class StringUtilities {
     * @return the concatenation of an integer, `firstSegment`, and a String, `secondSegment`
     */
    public static String concatenation(int firstSegment, String secondSegment){
-       return firstSegment + secondSegment;
-       //return null;
+       return Integer.toString(firstSegment) + secondSegment;
    }
 
    /**
@@ -43,8 +42,7 @@ public class StringUtilities {
     * @return the last 3 characters of `input`
     */
    public static String getSuffix(String input){
-       int lengthString = input.length();
-       return input.substring(lengthString-3,lengthString);
+       return input.substring(input.length() - 3);
    }
 
    /**
@@ -64,8 +62,8 @@ public class StringUtilities {
    public static Character getMiddleCharacter(String inputValue){
        int lengthString = inputValue.length();
        int halfString = lengthString / 2;
-       int option = (halfString%2 == 0) ? 1 : 0;
-       char middleChar = (inputValue.substring(halfString-option,++halfString-option)).charAt(0);
+       int option = (halfString % 2 == 0) ? 1 : 0;
+       char middleChar = inputValue.charAt(halfString - option);
        return middleChar;
    }
 
@@ -93,7 +91,7 @@ public class StringUtilities {
        int lengthString = stringToReverse.length();
        String[] splitWord = stringToReverse.split("");
        String reverseWord = "";
-       for(int i = lengthString-1; i >= 0; i--){
+       for(int i = lengthString - 1; i >= 0; i--){
            reverseWord += splitWord[i];
        }
        return reverseWord;
